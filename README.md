@@ -46,4 +46,9 @@ O Rocketpay é um componente que simula o formulário de preenchimento de cartã
 
 Feito com ♥ by Marco :wave: [Acesse meu perfil no LinkedIn](https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/)
 
-<a href="https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/" target="_blank" align="center"> <img src=".github/profile.png" gitalign="center"> </a>
+<a href="https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/" target="_blank">
+<p align="center">
+  <img alt="rocketpay" src=".github/profile.png"
+  width="30%">
+</p>
+</a>
