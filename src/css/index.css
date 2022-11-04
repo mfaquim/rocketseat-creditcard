@@ -1,7 +1,30 @@
 @import "base.css";
 @import "credit-card.css";
 @import "form.css";
+@import "modal.css";
+@import "error.css";
+@import "redes.css";
 
+@media (max-width: 780px) {
+  .error {
+    bottom: -57px;
+    left: 0px;
+  }
+  .error::before {
+    left: 172px;
+    top: -5px;
+  }
+  #app > header > label:nth-child(2) {
+    position: relative;
+    left: 18vw;
+    margin-right: 1px;
+  }
+
+  #app > header > label:nth-child(3) {
+    position: relative;
+    left: 20vw;
+  }
+}
 @media (max-width: 420px) {
   :root {
     font-size: 50%;
@@ -15,13 +38,38 @@
     background: none;
     border: none;
   }
-
+  .cc {
+    gap: 15px;
+  }
   .cc-bg svg {
     width: 100%;
     height: auto;
   }
-}
+  .modal p {
+    padding-inline: 20px;
+    text-align: center;
+  }
+  .error::before {
+    left: 136px;
+  }
+  .error {
+    top: 64px;
+    bottom: -50px;
+  }
+  .switch {
+    display: flex;
+  }
+  #app > header > label:nth-child(2) {
+    position: relative;
+    left: 15vw;
+    margin-right: 0px;
+  }
 
+  #app > header > label:nth-child(3) {
+    position: relative;
+    left: 18vw;
+  }
+}
 @media (min-width: 780px) {
   #app {
     grid-template-areas:
@@ -46,5 +94,9 @@
 
   #app form {
     grid-area: C;
+  }
+
+  .switch {
+    display: flex;
   }
 }

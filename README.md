@@ -1,7 +1,7 @@
 <h1 align="center"> Explorer Lab #01 </h1>
 
 <p align="center">
-Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB.
+Evento exclusivo que participei, promovido pela Rocketseat para ensino de tecnologias WEB.
 </p>
 
 <p align="center">
@@ -35,14 +35,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Rocketpay é um componente que simula o formulário de preenchimento de cartão de crédito, onde é possível adicionar máscara aos inputs e atualizar elementos HTML via DOM.
 
-## 🔖 Layout
+## 💡 Features by Marco
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://www.figma.com/file/gpqavL469k0pPUGOmAQEM9/Explorer-Lab-%2301/duplicate). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
-
-## :memo: Licença
-
-Esse projeto está sob a licença MIT.
+- Tradução de Inglês para Português, e de Português para Inglês.
+- Máscara de caracteres que não permite números no campo de Nome.
+- Ícones e SVG coloridos.
+- Coluna lateral com links para Portfolio, GitHub, e LinkedIn.
+- Validações com feedback.
+- Modal de feedback para cartão adicionado.
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
+Feito com ♥ by Marco :wave: [Acesse meu perfil no LinkedIn](https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/)
+
+<a href="https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/" target="_blank"> <img src=".github/profile.png"> </a>

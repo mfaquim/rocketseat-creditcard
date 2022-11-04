@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./cc-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocketpay</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="./src/css/index.css" /> -->
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="./logo.svg" alt="ícone rocketpay" />
+      </header>
+
+      <label class="switch">
+        <span class="slider round"></span>
+      </label>
+      <label class="switch">
+        <span class="slider round"></span>
+      </label>
+
+      <section class="cc">
+        <div class="cc-bg"></div>
+
+        <div class="cc-logo">
+          <span>
+            <img src="./cc-icon.svg" alt="ícone padrão de cartão" />
+          </span>
+          <span
+            ><img
+              src="./cc-default.svg"
+              alt="ícone do cartão de crédito selecionado"
+          /></span>
+        </div>
+
+        <div class="cc-info">
+          <div class="cc-number">1234 5678 9012 3456</div>
+
+          <div class="cc-holder">
+            <div class="label">
+              <span lang="pt-BR">Nome do titular</span>
+              <span lang="en">Cardholder Name</span>
+            </div>
+            <div class="value">
+              <span lang="pt-BR">FULANO DA SILVA</span>
+              <span lang="en">JAMES SMITH</span>
+            </div>
+          </div>
+
+          <div class="cc-extra">
+            <div class="cc-expiration">
+              <div class="label">
+                <span lang="pt-BR">Expiração</span>
+                <span lang="en">Expiration Date</span>
+              </div>
+              <div class="value">02/32</div>
+            </div>
+            <div class="cc-security">
+              <div class="label">CVC/CVV</div>
+              <div class="value">123</div>
+            </div>
+            <img src="./cc-chip.svg" alt="ícone de chip de cartão de crédito" />
+          </div>
+        </div>
+      </section>
+
+      <form action="">
+        <div class="input-wrapper">
+          <label for="card-number"
+            ><span lang="pt-BR">Número do cartão</span>
+            <span lang="en">Card number</span></label
+          >
+          <input id="card-number" inputmode="numeric" />
+          <!--alteração para required-->
+        </div>
+
+        <div class="input-wrapper">
+          <label for="card-holder">
+            <span lang="pt-BR">Nome do titular</span>
+            <span lang="en">Cardholder name</span></label
+          >
+          <input id="card-holder" maxlength="34" />
+        </div>
+
+        <div class="flex">
+          <div class="input-wrapper">
+            <label for="expiration-date"
+              ><span lang="pt-BR">Expiração</span>
+              <span lang="en">Expiration Date</span></label
+            >
+            <input id="expiration-date" inputmode="numeric" />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="security-code">CVC/CVV</label>
+            <input id="security-code" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <button type="submit" class="button">
+            <span lang="pt-BR">ADICIONAR CARTÃO</span>
+            <span lang="en">ADD CARD</span>
+          </button>
+          <div class="error">
+            <p>
+              <span lang="pt-BR">Insira todos os campos!</span>
+              <span lang="en">Fields required</span>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="overlay-modal">
+      <div class="modal">
+        <p>
+          <span lang="pt-BR">Cartão adicionado com sucesso!</span>
+          <span lang="en">Congratulations! Card sucessfully added!</span>
+        </p>
+        <button class="button">
+          <span lang="pt-BR">PROSSEGUIR</span>
+          <span lang="en">OK</span>
+        </button>
+      </div>
+    </div>
+    <aside>
+      <div>
+        <ul class="redes">
+          <li>
+            <a
+              id="linkedin"
+              target="_blank"
+              href="https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/"
+            >
+              <img src="/icon-linkedin.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a id="github" target="_blank" href="https://github.com/mfaquim">
+              <img src="/github.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
