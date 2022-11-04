@@ -3,8 +3,7 @@
   box-shadow: -5px -5px 20px #2a85a1, 5px 5px 20px #5affff;
   position: absolute;
   right: 0;
-  border-start-end-radius: 12px;
-  border-end-end-radius: 12px;
+  border-radius: 12px;
   top: calc((100vh / 2) - (185px / 2));
   padding: 12px 16px;
   display: flex;
