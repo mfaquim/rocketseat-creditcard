@@ -12,7 +12,11 @@
     "vite": "^3.1.0"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.30",
+    "hamburgers": "^1.2.1",
     "imask": "^6.4.3",
-    "jquery": "^3.6.1"
+    "jquery": "^3.6.1",
+    "rc-slider": "^10.1.0",
+    "toastify-js": "^1.12.0"
   }
 }

@@ -70,7 +70,7 @@ body {
   object-fit: fill;
   justify-content: space-between;
   position: relative;
-  right: 0px;
+  float: inline-end;
 }
 
 #app .switch:nth-child(3) {
@@ -83,8 +83,8 @@ body {
   width: 50px;
   height: 30px;
   justify-content: space-between;
-  right: 0px;
-  top: 0px;
+  display: flex;
+  float: inline-end;
 }
 
 .default-value #defaultPt {
