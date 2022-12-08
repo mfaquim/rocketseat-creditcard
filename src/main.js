@@ -1,18 +1,18 @@
-import "./css/index.css"
-import IMask from "imask"
+import "./css/index.css";
+import IMask from "imask";
 
-const ccLogo = document.querySelector(".cc-logo span:last-child img")
-const background = document.querySelector(".cc")
+const ccLogo = document.querySelector(".cc-logo span:last-child img");
+const background = document.querySelector(".cc");
 
-const cardNumber = document.querySelector("form #card-number")
-const cardHolder = document.querySelector("form #card-holder")
-const expirationDate = document.querySelector("form #expiration-date")
-const securityCode = document.querySelector("form #security-code")
+const cardNumber = document.querySelector("form #card-number");
+const cardHolder = document.querySelector("form #card-holder");
+const expirationDate = document.querySelector("form #expiration-date");
+const securityCode = document.querySelector("form #security-code");
 
-const addButton = document.querySelector("form .button")
-const modal = document.querySelector(".overlay-modal")
-const modalButton = document.querySelector(".overlay-modal button")
-const error = document.querySelector(".error")
+const addButton = document.querySelector("form .button");
+const modal = document.querySelector(".overlay-modal");
+const modalButton = document.querySelector(".overlay-modal button");
+const error = document.querySelector(".error");
 
 function setCardType(type) {
   const colors = {
@@ -67,10 +67,10 @@ function setCardType(type) {
     default: {
       background: "url('./bg-default.svg')",
     },
-  }
+  };
 
-  background.style.backgroundImage = colors[type].background
-  ccLogo.setAttribute("src", `./cc-${type}.svg`)
+  background.style.backgroundImage = colors[type].background;
+  ccLogo.setAttribute("src", `./cc-${type}.svg`);
 }
 
 //number mask
@@ -170,17 +170,17 @@ const cardNumberMasked = IMask(cardNumber, {
   ],
 
   dispatch: function (appended, dynamicMasked) {
-    const number = (dynamicMasked.value + appended).replace(/\D/g, "")
+    const number = (dynamicMasked.value + appended).replace(/\D/g, "");
     const foundMask = dynamicMasked.compiledMasks.find((item) => {
-      return number.match(item.regex)
-    })
-    return foundMask
+      return number.match(item.regex);
+    });
+    return foundMask;
   },
-})
+});
 
 //holder masked//
 //learnt how to mask letters only
-const cardHolderMasked = IMask(cardHolder, { mask: /[a-zA-Z\s]$/ })
+const cardHolderMasked = IMask(cardHolder, { mask: /[a-zA-Z\s]$/ });
 
 //expiration date
 const expirationDatePattern = {
@@ -198,15 +198,15 @@ const expirationDatePattern = {
       to: 12,
     },
   },
-}
+};
 
-const expirationDateMasked = IMask(expirationDate, expirationDatePattern)
+const expirationDateMasked = IMask(expirationDate, expirationDatePattern);
 
 //security code
 const securityCodePattern = {
   mask: "0000",
-}
-const securityCodeMasked = IMask(securityCode, securityCodePattern)
+};
+const securityCodeMasked = IMask(securityCode, securityCodePattern);
 
 //clean visual patterns
 const inputsArray = [
@@ -214,18 +214,18 @@ const inputsArray = [
   cardHolderMasked,
   expirationDateMasked,
   securityCodeMasked,
-]
+];
 
 function cleanInputs() {
-  cardHolderMasked.value = ""
-  cardNumberMasked.value = ""
-  expirationDateMasked.value = ""
-  securityCodeMasked.value = ""
+  cardHolderMasked.value = "";
+  cardNumberMasked.value = "";
+  expirationDateMasked.value = "";
+  securityCodeMasked.value = "";
 }
 
 //mexer aqui para corrigir a deficiência de correção de erros de digitação (não aparecer o campo e o erro)
 addButton.addEventListener("click", (e) => {
-  e.preventDefault()
+  e.preventDefault();
   if (
     !cardHolderMasked.value ||
     !cardNumberMasked.value ||
@@ -233,119 +233,129 @@ addButton.addEventListener("click", (e) => {
     !securityCodeMasked.value
   ) {
   } else {
-    modal.classList.add("active")
+    modal.classList.add("active");
     modal.addEventListener("click", (event) => {
       if (event.currentTarget === event.target) {
-        modal.classList.remove("active")
-        cleanInputs()
+        modal.classList.remove("active");
+        cleanInputs();
       }
-    })
+    });
   }
 
   modalButton.addEventListener("click", () => {
-    modal.classList.remove("active")
-    cleanInputs()
-  })
+    modal.classList.remove("active");
+    cleanInputs();
+  });
 
   inputsArray.forEach((item) => {
     if (item.value === "") {
-      item.el.input.classList.add("invalid")
-      item.el.input.classList.add("title")
-      let title = document.querySelector(".title")
-      title = "Campo requer preenchimento."
-      error.classList.add("active")
+      item.el.input.classList.add("invalid");
+      item.el.input.classList.add("title");
+      let title = document.querySelector(".title");
+      title = "Campo requer preenchimento.";
+      error.classList.add("active");
     } else {
-      error.classList.remove("active")
-      item.el.input.classList.remove("invalid")
-      item.el.input.classList.add("title")
+      error.classList.remove("active");
+      item.el.input.classList.remove("invalid");
+      item.el.input.classList.add("title");
     }
-  })
-})
+  });
+});
 
 //document.querySelector("form").addEventListener("submit", (event) => {
 //event.preventDefault()
 //})
 
 cardNumberMasked.on("accept", () => {
-  const cardType = cardNumberMasked.masked.currentMask.cardtype
-  setCardType(cardType)
-  console.log(cardType)
-  updateCardNumber(cardNumberMasked.value)
-})
+  const cardType = cardNumberMasked.masked.currentMask.cardtype;
+  setCardType(cardType);
+  console.log(cardType);
+  updateCardNumber(cardNumberMasked.value);
+});
 
 function updateCardNumber(number) {
-  const ccNumber = document.querySelector(".cc-number")
-  ccNumber.innerText = number.length === 0 ? "1234 5678 9012 3456" : number
+  const ccNumber = document.querySelector(".cc-number");
+  ccNumber.innerText = number.length === 0 ? "1234 5678 9012 3456" : number;
 }
 
-cardHolderMasked.on("accept", translateCardHolder)
+cardHolderMasked.on("accept", translateCardHolder);
 
 function translateCardHolder() {
-  const ccHolder = document.querySelector(".cc-holder .value")
-  const check1 = document.querySelector("#defaultPt.selected")
-  const check2 = document.querySelector("#defaultEn.selected")
+  const ccHolder = document.querySelector(".cc-holder .value");
+  const check1 = document.querySelector("#defaultPt.selected");
+  const check2 = document.querySelector("#defaultEn.selected");
 
   if (check1) {
     ccHolder.innerText =
-      cardHolder.value.length === 0 ? "FULANO DA SILVA" : cardHolder.value
+      cardHolder.value.length === 0 ? "FULANO DA SILVA" : cardHolder.value;
   } else if (check2) {
     ccHolder.innerText =
-      cardHolder.value.length === 0 ? "JAMES SMITH" : cardHolder.value
+      cardHolder.value.length === 0 ? "JAMES SMITH" : cardHolder.value;
   }
 }
 
 expirationDateMasked.on("accept", () => {
-  updateExpirationDate(expirationDateMasked.value)
-})
+  updateExpirationDate(expirationDateMasked.value);
+});
 
 function updateExpirationDate(date) {
-  const ccExpiration = document.querySelector(".cc-expiration .value")
-  ccExpiration.innerText = date.length === 0 ? "02/32" : date
+  const ccExpiration = document.querySelector(".cc-expiration .value");
+  ccExpiration.innerText = date.length === 0 ? "02/32" : date;
 }
 
 securityCodeMasked.on("accept", () => {
-  updateSecurityCode(securityCodeMasked.value)
-})
+  updateSecurityCode(securityCodeMasked.value);
+});
 
 function updateSecurityCode(code) {
-  const ccSecurity = document.querySelector(".cc-security .value")
-  ccSecurity.innerText = code.length === 0 ? "123" : code
+  const ccSecurity = document.querySelector(".cc-security .value");
+  ccSecurity.innerText = code.length === 0 ? "123" : code;
 }
 
 //language change
 
-const languageButton = document.querySelector("#app header label:nth-child(2)")
-const languageButton2 = document.querySelector("#app label:nth-child(3)")
-const selectEnglish = document.querySelectorAll('div span[lang="en"]')
-const selectPortuguese = document.querySelectorAll('div span[lang="pt-BR"]')
-translate(selectPortuguese, selectEnglish)
+const languageButton = document.querySelector("#app header label:nth-child(2)");
+const languageButton2 = document.querySelector("#app label:nth-child(3)");
+const selectEnglish = document.querySelectorAll('div span[lang="en"]');
+const selectPortuguese = document.querySelectorAll('div span[lang="pt-BR"]');
+translate(selectPortuguese, selectEnglish);
 languageButton.addEventListener("click", (event) => {
-  event.preventDefault()
-  translate(selectEnglish, selectPortuguese)
-})
+  event.preventDefault();
+  translate(selectEnglish, selectPortuguese);
+});
 
 languageButton2.addEventListener("click", (event) => {
-  event.preventDefault()
-  translate(selectPortuguese, selectEnglish)
-})
+  event.preventDefault();
+  translate(selectPortuguese, selectEnglish);
+});
 
 function translate(language, language2) {
   for (let i = 0; i < language.length; i++) {
-    const element = language[i].classList
-    element.add("selected")
-    const element2 = language2[i].classList
-    element2.remove("selected")
+    const element = language[i].classList;
+    element.add("selected");
+    const element2 = language2[i].classList;
+    element2.remove("selected");
   }
 
-  const check1 = document.querySelector("#defaultPt.selected")
-  const check2 = document.querySelector("#defaultEn.selected")
-  const cardHolder = document.querySelector("#holdervalue")
+  const check1 = document.querySelector("#defaultPt.selected");
+  const check2 = document.querySelector("#defaultEn.selected");
+  const cardHolder = document.querySelector("#holdervalue");
 
   if (cardHolder.innerText === "FULANO DA SILVA" && check2) {
-    cardHolder.innerText = "JAMES SMITH"
+    cardHolder.innerText = "JAMES SMITH";
   } else if (cardHolder.innerText === "JAMES SMITH" && check1) {
-    cardHolder.innerText = "FULANO DA SILVA"
+    cardHolder.innerText = "FULANO DA SILVA";
   } else if (cardHolder.innertext) {
-    cardHolder.innertext = cardHolder
+    cardHolder.innertext = cardHolder;
   }
 }
+
+const redesButton = document.querySelector(".redes");
+
+window.addEventListener("load", () => {
+  redesButton.classList.add("active");
+});
+
+redesButton.addEventListener("animationend", () => {
+  redesButton.classList.remove("active");
+});
