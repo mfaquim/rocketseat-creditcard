@@ -27,6 +27,40 @@ body {
   place-items: center;
 
   min-height: 100vh;
+
+-webkit-animation: color-change-3x 6s linear infinite alternate both;
+	        animation: color-change-3x 6s linear infinite alternate both;
+
+-webkit-keyframes color-change-3x {
+  0% {
+    background: #1a5466;
+  }
+  33,333333% {
+    background: #1a5466;
+  }
+  66,666666% {
+    background: #040e12;
+  }
+
+  100% {
+    background: #000;
+  }
+}
+}
+
+@keyframes color-change-3x {
+  0% {
+    background: #1a5466;
+  }
+  33.333333% {
+    background: #1a5466;
+  }
+  66.666666% {
+    background: #040e12;
+  }
+  100% {
+    background: #000;
+  }
 }
 
 .flex {
