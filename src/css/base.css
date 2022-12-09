@@ -100,8 +100,8 @@ body {
 
 @-webkit-keyframes heartbeat {
   from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(2);
+            transform: scale(2);
     -webkit-transform-origin: center center;
             transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
@@ -126,8 +126,8 @@ body {
             animation-timing-function: ease-in;
   }
   45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(2);
+            transform: scale(2);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
@@ -160,8 +160,8 @@ body {
             animation-timing-function: ease-in;
   }
   45% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }

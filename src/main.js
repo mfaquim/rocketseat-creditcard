@@ -135,36 +135,6 @@ const cardNumberMasked = IMask(cardNumber, {
     },
     {
       mask: "0000 0000 0000 0000",
-      regex: /^628167/,
-      cardtype: "fortbrasil",
-    },
-    {
-      mask: "0000 0000 0000 0000",
-      regex: /^605032/,
-      cardtype: "grandcard",
-    },
-    {
-      mask: "0000 0000 0000 0000",
-      regex: /^606282|^3841(?:[0|4|6]{1})0/,
-      cardtype: "hypercard",
-    },
-    {
-      mask: "0000 0000 0000 0000",
-      regex: /^636085/,
-      cardtype: "personalcard",
-    },
-    {
-      mask: "0000 0000 0000 0000",
-      regex: /^606444|^606458|^606482/,
-      cardtype: "valecard",
-    },
-    {
-      mask: "0000 0000 0000 0000",
-      regex: /^627892|^636414/,
-      cardtype: "sorocred",
-    },
-    {
-      mask: "0000 0000 0000 0000",
       cardtype: "default",
     },
   ],
