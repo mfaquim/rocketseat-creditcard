@@ -4,7 +4,7 @@
   position: absolute;
   right: calc((100vw / 2) - (120px / 2));
   border-radius: 12px;
-  top: calc((100vh / 2) + (509px / 2));
+  top: calc((100vh / 2) + (550px / 2));
   padding: 12px 16px;
   display: flex;
   flex-direction: row;
@@ -176,6 +176,7 @@
         -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	animation: heartbeat 1.5s ease-in-out infinite both;
         animation-delay: 8s;
+    background-color: #202024;    
   }
 
   
