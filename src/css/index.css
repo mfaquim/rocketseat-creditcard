@@ -14,17 +14,25 @@
     left: 172px;
     top: -5px;
   }
-  #app > header > label:nth-child(2) {
+
+  #app > header > span :nth-child(1) {
+    display: none;
+  }
+  #app .switch:nth-child(3) {
     position: relative;
-    left: 18vw;
+    left: 35%;
     margin-right: 1px;
+    display: flex;
   }
 
-  #app > header > label:nth-child(3) {
+  #app .switch:nth-child(4) {
     position: relative;
-    left: 20vw;
+    left: 38%;
+    margin-right: 1px;
+    display: flex;
   }
 }
+
 @media (max-width: 420px) {
   :root {
     font-size: 50%;
@@ -59,17 +67,29 @@
   .switch {
     display: flex;
   }
-  #app > header > label:nth-child(2) {
-    position: relative;
-    left: 15vw;
-    margin-right: 0px;
+
+  #app .mobileOn {
+    display: none;
   }
 
-  #app > header > label:nth-child(3) {
+  #app > header > span :nth-child(1) {
+    display: none;
+  }
+  #app .switch:nth-child(3) {
     position: relative;
-    left: 18vw;
+    left: 22%;
+    margin-right: 1px;
+    display: flex;
+  }
+
+  #app .switch:nth-child(4) {
+    position: relative;
+    left: 23%;
+    margin-right: 1px;
+    display: flex;
   }
 }
+
 @media (min-width: 780px) {
   #app {
     grid-template-areas:
@@ -99,4 +119,6 @@
   .switch {
     display: flex;
   }
+
+  
 }

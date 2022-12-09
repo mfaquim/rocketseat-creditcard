@@ -86,7 +86,7 @@
             transform: translateX(0) translateY(0);
   }
   100% {
-    -webkit-box-shadow: 10px 10px 0px #5affff, -1px 1px #1a5466, -2px 2px #1a5466, -3px 3px #1a5466, -4px 4px #1a5466, -5px 5px #1a5466, -6px 6px #1a5466, -7px 7px #1a5466, -8px 8px #1a5466;
+    -webkit-box-shadow: 10px 10px 0px #6affff, -1px 1px #1a5466, -2px 2px #1a5466, -3px 3px #1a5466, -4px 4px #1a5466, -5px 5px #1a5466, -6px 6px #1a5466, -7px 7px #1a5466, -8px 8px #1a5466;
             box-shadow: 10px 10px 0px #2a85a1, -1px 1px #1a5466, -2px 2px #1a5466, -3px 3px #1a5466, -4px 4px #1a5466, -5px 5px #1a5466, -6px 6px #1a5466, -7px 7px #1a5466, -8px 8px #1a5466;
     -webkit-transform: translateX(8px) translateY(-8px);
             transform: translateX(8px) translateY(-8px);
@@ -94,14 +94,14 @@
 }
 @keyframes shadow-pop-bl {
   0% {
-    -webkit-box-shadow: 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466;
-            box-shadow: 0 0 #2a85a1, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466;
+    -webkit-box-shadow: 0 0px #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466;
+            box-shadow: 0 0 #2a85a1, 0 0 #1a5466, 0 0 #000, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466, 0 0 #1a5466;
     -webkit-transform: translateX(0) translateY(0);
             transform: translateX(0) translateY(0);
   }
   100% {
-    -webkit-box-shadow: 5px 5px 0px #5affff, -1px 1px #1a5466, -2px 2px #1a5466, -3px 3px #1a5466, -4px 4px #1a5466, -5px 5px #1a5466, -6px 6px #1a5466, -7px 7px #1a5466, -8px 8px #1a5466;
-            box-shadow: 5px 5px 0px #2a85a1, -1px 1px #1a5466, -2px 2px #1a5466, -3px 3px #1a5466, -4px 4px #1a5466, -5px 5px #1a5466, -6px 6px #1a5466, -7px 7px #1a5466, -8px 8px #1a5466;
+    -webkit-box-shadow: 3px 3px 0px #6affff, -1px 1px #000, -2px 2px #000, -3px 3px #000, -4px 4px #1a5466, -5px 5px #1a5466, -6px 6px #1a5466, -7px 7px #1a5466, -8px 8px #1a5466;
+            box-shadow: 3px 3px 0px #848496, -1px 1px #000, -2px 2px #000, -3px 3px #1a5466, -4px 4px #1a5466, -5px 5px #1a5466, -6px 10px #1a5466, -7px 7px #1a5466, -8px 8px #1a5466, 10px 10px 0px #1a5466;
     -webkit-transform: translateX(8px) translateY(-8px);
             transform: translateX(8px) translateY(-8px);
   }
