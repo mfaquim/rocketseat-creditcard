@@ -314,8 +314,8 @@ function updateSecurityCode(code) {
 
 //language change
 
-const languageButton = document.querySelector("#app header label:nth-child(2)");
-const languageButton2 = document.querySelector("#app label:nth-child(3)");
+const languageButton = document.querySelector("#app header label:nth-child(3)");
+const languageButton2 = document.querySelector("#app label:nth-child(4)");
 const selectEnglish = document.querySelectorAll('div span[lang="en"]');
 const selectPortuguese = document.querySelectorAll('div span[lang="pt-BR"]');
 translate(selectPortuguese, selectEnglish);

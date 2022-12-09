@@ -28,12 +28,12 @@ body {
 
   min-height: 100vh;
 
--webkit-animation: color-change-3x 6s linear infinite alternate both;
-	        animation: color-change-3x 6s linear infinite alternate both;
+-webkit-animation: color-change-4x 6s linear infinite alternate both;
+	        animation: color-change-4x 6s linear infinite alternate both;
 
 -webkit-keyframes color-change-3x {
   0% {
-    background: #1a5466;
+    background: #6affff;
   }
   33,333333% {
     background: #1a5466;
@@ -48,9 +48,9 @@ body {
 }
 }
 
-@keyframes color-change-3x {
+@keyframes color-change-4x {
   0% {
-    background: #1a5466;
+    background: #6affff;
   }
   33.333333% {
     background: #1a5466;
@@ -83,16 +83,20 @@ body {
   box-shadow: -5px -5px 0px #1a5466, 5px 5px 0px #6affff;
 }
 
+
+
 #app header {
   display: flex;
-  align-items: center;
+
+}
+#app > header > span:nth-child(2) {
+  display: flex;
+  position: relative;
+  left: 138%;
 }
 
-#app .switch {
-  display: grid;
-}
-
-#app .switch:nth-child(2) {
+#app .switch:nth-child(3) {
+  display: flex;
   background-image: url("/usaflag.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -105,9 +109,13 @@ body {
   justify-content: space-between;
   position: relative;
   float: inline-end;
+  left: 140%;;
+  margin-right: 10px;
+  align-self: center;
 }
 
-#app .switch:nth-child(3) {
+#app .switch:nth-child(4) {
+  display: flex;
   background-image: url("/brazil.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -117,9 +125,15 @@ body {
   width: 50px;
   height: 30px;
   justify-content: space-between;
-  display: flex;
-  float: inline-end;
+  position: relative;
+  right: 0px;
+  left: 140%;
+  margin-right: 10px;
+  align-self: center;
 }
+
+
+
 
 .default-value #defaultPt {
   display: none;
@@ -127,17 +141,6 @@ body {
 
 .default-value #defaultEn {
   display: none;
-}
-
-#app > header > label:nth-child(2) {
-  position: relative;
-  right: 0px;
-  margin-right: 10px;
-}
-
-#app > header > label:nth-child(3) {
-  position: relative;
-  right: 0px;
 }
 
 span:lang(en).selected {
@@ -153,13 +156,3 @@ span:lang(pt-BR) {
   display: none;
 }
 
-#app > header > label:nth-child(2) {
-  position: relative;
-  left: 430px;
-  margin-right: 10px;
-}
-
-#app > header > label:nth-child(3) {
-  position: relative;
-  left: 430px;
-}
