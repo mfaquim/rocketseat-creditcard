@@ -173,6 +173,10 @@
   .redes {
     flex-direction: row;
     position: static;
-    background-color: transparent;
+        -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	animation: heartbeat 1.5s ease-in-out infinite both;
+        animation-delay: 5s;
   }
+
+  
 }
