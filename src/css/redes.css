@@ -175,7 +175,7 @@
     position: static;
         -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	animation: heartbeat 1.5s ease-in-out infinite both;
-        animation-delay: 5s;
+        animation-delay: 8s;
   }
 
   
