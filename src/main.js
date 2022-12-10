@@ -65,7 +65,7 @@ function setCardType(type) {
       background: "url('./bg-amex.svg')",
     },
     default: {
-      background: "url('./bg-default.svg')",
+      background: "url('./bg-default2.svg')",
     },
   };
 
