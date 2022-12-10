@@ -53,11 +53,10 @@
   }
   .cc {
     gap: 15px;
-  }
-  .cc-bg svg {
     width: 100%;
     height: auto;
   }
+
   .modal p {
     padding-inline: 20px;
     text-align: center;
