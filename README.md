@@ -8,9 +8,10 @@ Evento exclusivo que participei no ano de 2022, promovido pela Rocketseat para e
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
+<br>
 
 <p align="center">
-<a href="https://rocketseat-creditcard.vercel.app/">Acesse aqui a aplicação)</a>
+<a href="https://rocketseat-creditcard.vercel.app/" target="_blank">Acesse aqui a aplicação</a>
 </p>
 
 <p align="center">
