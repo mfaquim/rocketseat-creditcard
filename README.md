@@ -1,7 +1,7 @@
 <h1 align="center"> Explorer Lab #01 </h1>
 
 <p align="center">
-Evento exclusivo que participei, promovido pela Rocketseat para ensino de tecnologias WEB.
+Evento exclusivo que participei no ano de 2022, promovido pela Rocketseat para ensino de tecnologias Front-end e Back-end.
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@ Evento exclusivo que participei, promovido pela Rocketseat para ensino de tecnol
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-  [Acesse aqui a aplicação](https://rocketseat-creditcard.vercel.app/) 
+<p align="center">[Acesse aqui a aplicação](https://rocketseat-creditcard.vercel.app/) </p>
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
@@ -18,7 +18,9 @@ Evento exclusivo que participei, promovido pela Rocketseat para ensino de tecnol
 <br>
 
 <p align="center">
-  <img alt="rocketpay" src="./public/project1.png">
+  <img alt="rocketpay" src="./public/meugif.gif">
+<p align="center">
+  <img alt="rocketpay" src="./public/meugif2.gif">
 
 ## 🚀 Tecnologias
 
@@ -34,6 +36,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Rocketpay é um componente que simula o formulário de preenchimento de cartão de crédito, onde é possível adicionar máscara aos inputs e atualizar elementos HTML via DOM.
 
+O projeto retorna imagens e ícones personalizados conforme a bandeira do cartão de crédito selecionada.
+
 ## 💡 Features by Marco
 
 - Tradução de Inglês para Português, e de Português para Inglês.
@@ -45,7 +49,7 @@ O Rocketpay é um componente que simula o formulário de preenchimento de cartã
 
 ---
 
-Feito com ♥ by Marco :wave: [Acesse meu perfil no LinkedIn](https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/)
+Feito com ♥ por Marco :wave: [Acesse meu perfil no LinkedIn](https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/)
 
 <a href="https://www.linkedin.com/in/marco-antonio-faquim-3645ab194/" target="_blank">
 <p align="center">
